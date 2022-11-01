@@ -1,5 +1,4 @@
 main {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,6 +19,20 @@ main .tenzies-container .tenzies {
   justify-content: center;
   align-items: center;
   row-gap: 2rem;
+}
+main .tenzies-container .tenzies .title {
+  font-family: "Karla";
+  line-height: 1.9rem;
+  letter-spacing: -0.03em;
+  color: #2b283a;
+}
+main .tenzies-container .tenzies .instructions {
+  font-family: "Inter";
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+  color: #4a4e74;
+  text-align: center;
+  width: 90%;
 }
 main .tenzies-container .tenzies .dice-container {
   display: grid;
