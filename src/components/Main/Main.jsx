@@ -16,8 +16,17 @@ const Main = () => {
     }
     return newDice;
   }
+
+  const holdDice = (id) => {
+    setDice((prevDice) => {
+      return prevDice.map((die) => {
+        return die.id === id ? { ...die, isHeld: !die.isHeld } : die;
+      });
+    });
+  };
+
   const dieComponents = dice.map((die) => {
-    return <Die key={die.id} value={die.value} die={die} />;
+    return <Die key={die.id} value={die.value} die={die} holdDice={holdDice} />;
   });
 
   const rollDice = () => {

@@ -7,6 +7,7 @@ const Die = (props) => {
           ? { backgroundColor: "#59E391", color: "#fff" }
           : { backgroundColor: "#fff", color: "#000" }
       }
+      onClick={() => props.holdDice(props.die.id)}
     >
       {props.value}
     </div>
