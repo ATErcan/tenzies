@@ -2,7 +2,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  height: 100vh;
+  padding: 0rem 0.2rem;
 }
 main .tenzies-container {
   background: #0b2434;
@@ -10,7 +11,6 @@ main .tenzies-container {
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  overflow: hidden;
 }
 main .tenzies-container .tenzies {
   background: #f5f5f5;
@@ -21,7 +21,6 @@ main .tenzies-container .tenzies {
   justify-content: center;
   align-items: center;
   row-gap: 2rem;
-  overflow: hidden;
 }
 main .tenzies-container .tenzies .title {
   font-family: "Karla";
@@ -40,7 +39,7 @@ main .tenzies-container .tenzies .instructions {
 main .tenzies-container .tenzies .dice-container {
   display: grid;
   grid-template-columns: 3rem 3rem;
-  grid-template-columns: 3rem 3rem;
+  grid-template-rows: 3rem 3rem;
   gap: 2rem 2.5rem;
   justify-content: center;
   align-items: center;
@@ -76,14 +75,13 @@ main .tenzies-container .tenzies .roll:focus {
 main .tenzies-container .tenzies .roll:active {
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
-main .tenzies-container .tenzies .win .win-message {
+main .tenzies-container .tenzies .win-message {
   font-size: 1.8rem;
-  animation: win 2s linear 1;
-  animation: win-dance 2s linear 2.1s infinite;
+  animation: win 1s ease-in-out 1, win-dance 2s linear 2.1s infinite;
 }
 @keyframes win {
   0% {
-    font-size: 0;
+    font-size: 0rem;
   }
   100% {
     font-size: 1.5rem;
@@ -101,5 +99,34 @@ main .tenzies-container .tenzies .win .win-message {
   }
   100% {
     transform: rotateY(30deg);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  main .tenzies-container {
+    width: 80%;
+    padding: 1.5rem;
+  }
+  main .tenzies-container .tenzies .roll {
+    padding: 0.9rem 3.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main .tenzies-container .tenzies .dice-container {
+    grid-template-columns: repeat(5, 3rem);
+    grid-template-rows: 3rem 3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main .tenzies-container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main .tenzies-container {
+    max-width: 40rem;
   }
 }
