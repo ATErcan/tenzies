@@ -2,7 +2,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 120vh;
   padding: 0rem 0.2rem;
 }
 main .tenzies-container {
@@ -106,6 +106,7 @@ main .tenzies-container .tenzies .win-message {
   main .tenzies-container {
     width: 80%;
     padding: 1.5rem;
+    height: 100vh;
   }
   main .tenzies-container .tenzies .roll {
     padding: 0.9rem 3.5rem;
