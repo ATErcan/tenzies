@@ -103,10 +103,12 @@ main .tenzies-container .tenzies .win-message {
 }
 
 @media screen and (min-width: 576px) {
+  main {
+    height: 100vh;
+  }
   main .tenzies-container {
     width: 80%;
     padding: 1.5rem;
-    height: 100vh;
   }
   main .tenzies-container .tenzies .roll {
     padding: 0.9rem 3.5rem;
